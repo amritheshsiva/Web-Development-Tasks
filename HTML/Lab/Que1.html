@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Question 1</title>
 </head>
 <body>
-    
+<form method="post">
+	<label for="name">Full Name</label>
+	<input type="text" name="name" id="name" placeholder="Enter Full Name" required maxlength="25"><br><br>
+	<label for="email">Email Address</label>
+	<input type="email" name="email" id="email" value="test@example.com" required autofocus><br><br>
+	<label for="pass">Password </label>
+	<input type="password" name="password" id="pass" required minlength="6" placeholder="Minimum 6 characters"><br><br>
+	<label for="cat">Category</label>
+	<select id="cat" name="category" required>
+		<option>student</option>
+		<option>employee</option>
+		<option selected>freelancer</option>
+	</select>
+	<br><br>
+	<label for="date">Event date:</label><br>
+	<input type="date" name="date" id="date" required>
+	<br><br>
+	<label>Number of tickets</label><br>
+<input type="radio" name="tickets" id="ticket1" value="1" required> 1 Ticket<br>
+<input type="radio" name="tickets" id="ticket2" value="2" checked> 2 Tickets<br>
+<input type="radio" name="tickets" id="ticket3" value="3"> 3 Tickets
+
+
+	<br><br>
+	<input type="checkbox" name="payment" id="cb" required>
+	<label for="cb">I agree to make an online payment</label>
+<br><br>
+	<label for="notes">Additional Notes:</label><br>
+	<textarea placeholder="Enter any additional notes here" name="notes" id="notes" rows="4" cols="40"></textarea>
+	<br><br>
+	<button type="submit">Submit</button>
+</form>
 </body>
 </html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Blog</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            /* margin: 20px; */
+        }
+        .blog-post{
+            background-color: #bfb9b93b;
+            border: 1px solid lightgray;
+            max-width: 2000px;
+            padding: 20px;
+            margin: auto;
+        }
+        .blog-post h1{
+            color: rgb(100, 99, 99);
+            text-align: center;
+        }
+        .name{
+            color: grey;
+            font-style: italic;
+            text-align: center;
+        }
+        .blog-post p::first-letter {
+            color: orangered;
+            font-size: 35px;
+        }
+        .blog-post p::first-line{
+            font-weight: bold;
+            }
+        blockquote{
+            background-color: lightgrey;
+            margin: 20px 0;
+            padding: 10px;
+            border-left: 5px solid orangered;
+            position: relative;
+            font-style: italic;
+        }
+        blockquote::before{
+            content: open-quote;
+            color: orangered;
+            font-size: 30px;
+        }
+        .list a:link{
+            color: blue;
+            text-decoration: none;
+         }
+         .list a:visited{
+            color: purple;
+         }
+         .list a:hover{
+            text-decoration: underline;
+         }
+         .side{
+            display: flex;
+            margin: 20px 10px;
+        }
+        .side h4+h4{
+            margin-left: auto;
+            color: orangered;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="blog-post">
+        <h1>Capturing the Golden Hour:Tips for Stunning Photos</h1>
+        <div class="name">by Morgan Sage</div>
+
+        <p>Photography is all about seeing the world through a different lens.Understanding light and composition can transform an ordinary scene into something extraordiary.The golden hour - the first hour after sunrise and the last hour before sunset - is perfect for creating warm,vibrant images.</p>
+        <p>Experimenting with angles and perspectives helps your photographs stand out.Don't just shoot from eye level; try crouching low, shooting from above, or using reflections to add depth.</p>
+
+        <blockquote>A photograph is the pause button of life</blockquote>
+
+        <p>For more resources,check out these links</p>
+        <div class="list" style="line-height:2;">
+            <ul>
+                <li><a href="#">Begineer Phottography Tips</a> - Learn essential techniques.</li>
+                <li><a href="#">Editing Tools and Software</a> - Enhance your photos with ease.</li>
+                <li><a href="#">Famous Photographers to Follow</a> - Get inspired by the masters.</li>
+            </ul>
+        </div>
+        <div class="side">
+            <h4>Equipment Recommendations</h4>
+            <h4>Common Mistakes to Avoid</h4>
+        </div>
+    </div>
+    
+</body>
+</html>

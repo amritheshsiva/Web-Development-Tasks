@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section p::first-line {
+            font-weight: bold;
+        }
+        section p::first-letter {
+            color: red;
+            font-size: 25px;
+        }
+        h3 + h3 {
+            color: green;
+        }
+        .links a{
+            color: blue;
+            text-decoration: none;
+        }
+        .links li:first-child a {
+            color:red
+        }
+        .links a:visited{
+            color: purple;
+        }
+        .links a:hover{
+            text-decoration: underline;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Discover the World of Technology.</h1>
+        <p>Technology is evolving at an unprecedented pace. From artificial intelligence to quantum computing, we are on the verge of breakthroughs that will redefine our world. Keeping up with the latest trends and understanding their implications is key to navigating the future.</p>
+        <p>Innovation in tech brings both exciting possibilities and challenges. As we integrate advanced tools into daily life, we must also consider their ethical and social impacts. The responsible use of technology will play a central role in shaping a sustainable future.</p>
+    </section>
+    <section>
+        <h3>Tech trends to watch</h3>
+        <h3>The future of innovation</h3>
+    </section>
+    <div class="links">
+        <ul>
+            <li><a href="#">Tech News</a></li>
+            <li><a href="#">Gadgets</a></li>
+            <li><a href="#">Tutorials</a></li>
+
+
+        </ul>
+    </div>
+</body>
+</html>

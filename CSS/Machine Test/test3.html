@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: linear-gradient(rgb(28, 59, 77),rgb(227, 134, 127))            ;
+        }
+        .loginspace{
+            padding: 35px;
+           margin-top: -10px;
+            margin-right: -8px;
+            margin-bottom: -10px;
+            margin-left: 50%;
+            border-left: 1px solid black;
+            height: 665px ;
+            background-color: white;
+        }
+        form{
+            padding: 105px 0px 0px 10px ;
+            font-size: 15px;
+            font-family: sans-serif;
+        }
+
+        label[for="email"],label[for="password"]{
+            font-size:15px;
+            font-weight: 600;
+        }
+
+        input[type="text"], input[type="password"]{
+            width: 70%;
+            height: 25px;
+            min-width: 285px;
+            /* max-width: 350px; */
+        } 
+    
+        input[type="button"]{
+            color: white;
+            background-color: orangered;
+            width:71%;
+            height: 27px;
+            border: orangered;
+            font-size: medium;
+            /* max-width: 350px; */
+            min-width: 292px;
+        }
+
+        @media only screen and (orientation:portrait) {
+            .loginspace{
+                margin-left: -10px;
+                height: 640px;
+                padding-left: 80px ;
+            }
+            form{
+                font-size: 18px;
+                padding: 25px 0px 0px 0px;
+                text-align: justify;
+                margin-left:25px
+            }  
+            input[type="text"], input[type="password"]{
+                width: 80%;
+                height: 30px;
+                max-width: 500px;
+    
+            } 
+    
+            input[type="button"]{
+                color: white;
+                background-color: orangered;
+                width: 82%;
+                height: 32px;
+                border: orangered;
+                font-size: 20px;
+                max-width: 510px;
+                min-width: 200px;
+            }
+            label[for="login"]{
+                font-size: 15px;
+            }
+         
+        }
+
+    </style>
+</head>
+<body>
+    <div class="loginspace">
+        <form>
+            <h1 style="color: orangered;">Login Form</h1>
+            <label for="email">Email :</label> <br>
+            <input type="text" id="email"><br><br>
+            <label for="password">Password</label> <br>
+            <input type="password" id="password"><br><br>
+            <input type="checkbox" id="login">
+            <label for="login"><i>Remember Me</i></label><br><br>
+            <input type="button" value="Login">
+        </form>
+    </div>
+</body>
+</html>

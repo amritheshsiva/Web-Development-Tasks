@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Section</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .header{
+            text-align: center;
+            color: rgb(62, 61, 61);
+        }
+        .blog-section{
+            display: flex;
+            padding: 20px;
+            text-align: justify;
+            margin: auto;
+        }
+        .blog-section > div{
+            border: 1px solid black;
+            border-radius: 8px;
+            margin: 20px;
+            width: 300px;
+            padding:15px;
+            text-align: center;
+        }
+        .blog-section img{
+            width: 100%;
+            height: auto;
+        }
+        .weapons img{
+            height: 450px;
+        }
+        a[href^="https"]{
+            color: red;
+            text-decoration: none;
+        }
+        img{
+            border-radius:15px ;
+        }
+        img[src$="jpg"]{
+            border-radius:0px 15px 0px 15px ;
+        }
+        @media only screen and (max-width: 600px) {
+            .blog-section {
+                display: block; 
+                padding: 10px;
+                margin: 20px;
+                background-color: lightyellow;
+            }
+            .blog-section > div {
+                width: 100%; 
+                margin: 10px 0;
+                font-size: 14px; 
+            }
+            .header h1 {
+                font-size: 20px;
+            }
+            .header p {
+                font-size: 14px;
+            }
+        }
+        
+        @media only screen and (orientation: portrait){
+            .blog-section{
+                background-color: lightyellow;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Featured Blog Section</h1>
+        <p>Your go-to space for the latest movie reviews and insights.</p>
+        <p>From high-speed racing to explosive sequels and gripping thrillers, dive into our picks and discover what’s worth watching next!</p>
+    </div>
+    <div class="blog-section">
+        <div class="f1">
+            <img src="https://imgs.search.brave.com/_7vtx0_I3yjISLIufImubBy2Fe_4Wk-9tlDtkzubMpY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/Y2luZW1hdGVyaWFs/LmNvbS9wLzI5N3gv/bDk0d2dhZHIvZjEt/dGhlLW1vdmllLW1v/dmllLXBvc3Rlci1t/ZC5qcGc_dj0xNzQ4/OTA1MDA0"
+             alt="f1movie">
+            <h3>F1</h3>
+            <p>Get ready for high-octane thrills in F1, a fast-paced ride filled with adrenaline, competition, and drama both on and off the track. From breathtaking race sequences to behind-the-scenes rivalries, this movie brings speed and storytelling together like never before.</p>
+            <a href="https://www.imdb.com/title/tt16311594/" target="_blank">Read More</a>
+        </div>
+        <div class="nobody2">
+            <img src="https://imgs.search.brave.com/G9hhadNJvk3LDIeoXBbTkCnQoxxR_JjAyMg_LSFGj8g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZmFuZGFuZ28u/Y29tL0ltYWdlUmVu/ZGVyZXIvODIwLzAv/cmVkZXNpZ24vc3Rh/dGljL2ltZy9kZWZh/dWx0X3Bvc3Rlci5w/bmcvMC9pbWFnZXMv/bWFzdGVycmVwb3Np/dG9yeS9mYW5kYW5n/by8yNDAxNDQvTkIy/X1RlYXNlcjFTaGVl/dF9SR0JfMi5qcGc"
+            alt="nobody2" >
+            <h3>Nobody 2</h3>
+            <p>The action continues in Nobody 2, where Hutch Mansell is back with even more brutal, stylish, and darkly humorous encounters. This sequel cranks up the intensity, balancing explosive action with emotional depth as Hutch faces new enemies and old demons.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="weapons">
+            <img src="https://imgs.search.brave.com/pRQucXmiFB_fngq2EYOS-VefCTJpB20DUFQmU-RRQTU/rs:fit:860:0:0:0/g:ce/aHR0cDovL3d3dy5p/bXBhd2FyZHMuY29t/LzIwMjUvcG9zdGVy/cy93ZWFwb25zX3Zl/cjQuanBn"
+            alt="weapons" >
+            <h3>Weapons</h3>
+            <p>Mysterious, chilling, and thought-provoking, Weapons is a bold entry into the thriller genre. The film blends psychological tension with shocking revelations, keeping you guessing at every turn. It’s a slow-burn story with a powerful ending that lingers.</p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+    
+</body>
+</html>

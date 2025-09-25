@@ -6,14 +6,11 @@
     <title>Document</title>
     <style>
         body{
-            background-image: linear-gradient(rgb(28, 59, 77),rgb(227, 134, 127))            ;
+            background-image: linear-gradient(rgb(28, 59, 77),rgb(249, 181, 176))            ;
         }
         .loginspace{
             padding: 35px;
-           margin-top: -10px;
-            margin-right: -8px;
-            margin-bottom: -10px;
-            margin-left: 50%;
+            margin:-10px -8px -10px 50% ;
             border-left: 1px solid black;
             height: 665px ;
             background-color: white;
@@ -22,6 +19,9 @@
             padding: 105px 0px 0px 10px ;
             font-size: 15px;
             font-family: sans-serif;
+        }
+        form h1{
+            color: orangered;
         }
 
         label[for="email"],label[for="password"]{
@@ -33,7 +33,7 @@
             width: 70%;
             height: 25px;
             min-width: 285px;
-            /* max-width: 350px; */
+            max-width: 400px;
         } 
     
         input[type="button"]{
@@ -43,7 +43,7 @@
             height: 27px;
             border: orangered;
             font-size: medium;
-            /* max-width: 350px; */
+            max-width: 405px;
             min-width: 292px;
         }
 
@@ -51,18 +51,19 @@
             .loginspace{
                 margin-left: -10px;
                 height: 640px;
-                padding-left: 80px ;
+                padding-left: 80px;
             }
             form{
                 font-size: 18px;
-                padding: 25px 0px 0px 0px;
+                padding-top: 50px;
                 text-align: justify;
-                margin-left:25px
+                margin-left:5px
             }  
             input[type="text"], input[type="password"]{
                 width: 80%;
                 height: 30px;
                 max-width: 500px;
+                min-width: 200px;
     
             } 
     
@@ -74,7 +75,7 @@
                 border: orangered;
                 font-size: 20px;
                 max-width: 510px;
-                min-width: 200px;
+                min-width: 210px;
             }
             label[for="login"]{
                 font-size: 15px;
@@ -87,7 +88,7 @@
 <body>
     <div class="loginspace">
         <form>
-            <h1 style="color: orangered;">Login Form</h1>
+            <h1>Login Form</h1>
             <label for="email">Email :</label> <br>
             <input type="text" id="email"><br><br>
             <label for="password">Password</label> <br>

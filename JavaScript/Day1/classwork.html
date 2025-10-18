@@ -7,16 +7,15 @@
 </head>
 <body>
     <script>
-        let tshirt=400;
-        let n=5;
-        let cap=150;
-        let m=3;
-        let totalearning= tshirt*n + cap*m;
+        let nTshirt=5;
+        let nCap=3;
+        let priceTshirt=400;
+        let priceCap=150;
+        let totalearning=nTshirt*priceTshirt + nCap*priceCap;
         document.write("Total earning is: " + totalearning);
-        tshirt=450; // updated price of tshirt
-        let totupdatedearning= tshirt*n + cap*m;
-        document.write(" <br>Total updated earning is: " + totupdatedearning);
+        priceTshirt=450; 
+        totalearning=nTshirt*priceTshirt + nCap*priceCap;
+        document.write("<br>Total updated earning is: " + totalearning);
     </script>
-    
 </body>
 </html>

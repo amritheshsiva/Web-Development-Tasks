@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Shop</title>
+</head>
+<body>
+    <script>
+        let itemRice="Rice";
+        let itemSugar="Sugar";
+        let itemWheat="wheat";
+
+        let priceRice=60;
+        let priceSugar=45;
+        let priceWheat=50;
+
+        let quantityRice=2;
+        let quantitySugar=1.5;
+        let quantityWheat=3;
+
+        let costRice=priceRice*quantityRice;
+        let costSugar=priceSugar*quantitySugar;
+        let costWheat=priceWheat*quantityWheat;
+
+        let totalbill=costRice+costSugar+costWheat;
+        console.log("Cost of Rice: "+costRice);
+        console.log("Cost of Sugar: "+costSugar);
+        console.log("Cost of Wheat: "+costWheat); 
+        console.log("Total Bill: "+totalbill);  
+
+        quantityRice=5;
+        costRice=priceRice*quantityRice;   
+        totalbill=costRice+costSugar+costWheat;
+        console.log("Updated Cost of Rice:"+costRice);
+        console.log("Updated Total bill: "+totalbill);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <script>
+        var feedback="   I loved the FOOD and the service!   ";
+        trim=feedback.trim();
+        low=trim.toLowerCase();
+        var replace=low.replace("food","ambiance");
+        var pos=replace.indexOf("service");
+        console.log("Position of service: "+pos);
+        var arr= replace.split(" ");
+        console.log("Array: " + arr);
+    </script>    
+</body>
+</html>

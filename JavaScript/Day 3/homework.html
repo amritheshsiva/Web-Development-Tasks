@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userProfile={
+            username:" CoolUser99",
+            bio:" I LOVE coding! JavaScript is Great!!! "
+        };
+        function cleanUserBio(profile){
+            var uname=profile.username.trim();
+            var ubio=profile.bio.trim();
+            var userLower=uname.toLowerCase();
+            var userBio=ubio.toLowerCase();
+            var replaceBio=userBio.replace(/JavaScript/gi,"JS");
+            var lenthBio=replaceBio.length;
+            return {
+                username:userLower,
+                bio:replaceBio,
+                bioLength:lenthBio
+            };
+        }
+            let cleanedProfile=cleanUserBio(userProfile);
+            console.log("Username :"+cleanedProfile.username);
+            console.log("Bio :"+cleanedProfile.bio);
+            console.log("Length of Bio :"+cleanedProfile.bioLength);
+        
+    </script>
+</body>
+</html>

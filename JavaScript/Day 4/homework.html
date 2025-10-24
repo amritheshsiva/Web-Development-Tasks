@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let rand=Math.floor(Math.random()*50)+1;
+        document.write("Mystery Level : " + rand);
+        let score=prompt("Enter your score");
+        score=Number(score);
+        document.write("<br>Absolute difference between the mystery level and the user's score is "+Math.abs(score-rand));
+        let sqrt=Math.sqrt(score);
+        document.write("<br>Square root of "+score+" is "+sqrt);
+        document.write("<br>  Value of Pi is "+Math.PI);
+        let conv="20"*5;
+        document.write(`<br>The highest value among 10, 20 and ${rand} is `+Math.max(10,20,rand) );
+        document.write(`<br>The lowest value among 10, 20 and ${rand} is `+Math.min(10,20,rand) );
+
+
+    </script>
+    
+</body>
+</html>

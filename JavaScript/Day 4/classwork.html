@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function randomNumber(){
+            return Math.floor(Math.random()*100)+1;
+        }
+        rand=randomNumber();
+        document.write("Random number between 1-100: "+rand+"<br>");
+        let userscore="75";
+        userscoreNum=Number(userscore);
+        differnece=userscoreNum-rand;
+        document.write("Difference between user score and random number: "+differnece+"<br>");
+        sqrt=Math.sqrt(userscoreNum);
+        rounded=Math.round(sqrt);
+        document.write(rounded+"<br>");
+        document.write("π constant (pi): "+Math.PI);
+        let str="50";
+        num=str*2;
+        document.write("<br>"+num);
+
+
+    </script>
+    
+</body>
+</html>

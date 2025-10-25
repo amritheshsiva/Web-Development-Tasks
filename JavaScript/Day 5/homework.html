@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Access Check</title>
+</head>
+<body>
+    <h2>User Profile Access Check</h2>
+    <p id="result"></p>
+    <script>
+        let user={
+            name:"Jishnu",
+            age:22,
+            admin:true
+        }
+        function checkAccess(){
+        let access=((user.admin==true)&&(user.age>=18))?"Access Granted":"Access Denied";
+        document.write(access);
+        let ageCheck=("age" in user)? (delete user.age,"Age is deleted"):"Age does not exist in user object";
+        console.log(user)
+        }
+    </script>
+    <button onclick="checkAccess()">Check Access</button>
+    
+</body>
+</html>

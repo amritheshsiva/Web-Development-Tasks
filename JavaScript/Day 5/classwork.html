@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Status Checker</title>
+</head>
+<body>
+    <script>
+        let order={
+            itemName:"Mobile",
+            isDelivered:true,
+            daysSinceDelivery:5
+        }
+        function checkDeliveryStatus(order){
+            let returnStatus=((order.isDelivered==true) && (order.daysSinceDelivery<=7)) ? "Eligible for Return" : "Return Period Expired";
+            console.log(returnStatus);
+            let exist="itemName"in order? "itemName exists in order object":"itemName does not exist in order object";
+            console.log(exist);
+            console.log(order);
+
+        }
+
+    </script>
+    <button onclick="checkDeliveryStatus(order)">Check for Eligiblity</button>
+    
+</body>
+</html>

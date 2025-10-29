@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Dashboard</title>
+</head>
+<body>
+    <h2>Student Result Dashboard</h2>
+    <p id="output"></p>
+
+    <script>
+        let list = [
+            { name: "Arjun", score: 45 },
+            { name: "Bala", score: 55 },
+            { name: "Chitra", score: 95 },
+            { name: "Divya", score: 75 },
+            { name: "Eshan", score: 25 }
+        ];
+
+        let result = "";
+
+        let morescore = list.filter(function(item){
+            return item.score > 60;
+        });
+
+        result += "<b>Students scoring more than 60:</b><br>";
+        morescore.forEach(function(s){
+            result += s.name + " - " + s.score + "<br>";
+        });
+
+        let sum = 0;
+        list.forEach(function(item) {
+            sum += item.score;
+        });
+        result += "<br><b>Total Score:</b> " + sum + "<br>";
+
+        let allPassed = list.every(function(student){
+            return student.score > 35;
+        });
+        result += "All students passed: " + allPassed + "<br>";
+
+        let highScorer = list.some(function(student){
+            return student.score > 90;
+        });
+        result += "At least one student scored above 90: " + highScorer + "<br>";
+
+        let sortedList = list.sort(function(a, b){
+            return b.score - a.score;
+        });
+
+        result += "<br><b>Sorted Students (High to Low):</b><br>";
+        sortedList.forEach(function(student){
+            result += student.name + " - " + student.score + "<br>";
+        });
+
+        document.getElementById("output").innerHTML = result;
+    </script>
+</body>
+</html>

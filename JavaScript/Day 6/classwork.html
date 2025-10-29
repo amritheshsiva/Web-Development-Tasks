@@ -1,0 +1,30 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let product=["Apple","Banana","Grapes","Mango"];
+            let price=[50,30,70,60];
+            let merge=product.map(function(item,index){
+                return "Product:"+item+ ", Price:"+price[index];
+            })
+            merge.forEach(function(item) {
+                document.write(item + "<br>");
+            });
+            filter=price.filter(function(value){
+                return value>50;
+            });
+            document.write("Prices greater than Rs 50: "+filter+"<br>");
+            product.push("watermelon");
+            price.push(80);
+            merge = product.map(function(item, index) {
+                return "Product: " + item + " - Price: " + price[index];
+            });
+            document.write("Updated List: "+merge);
+        </script>    
+    </body>
+    </html>

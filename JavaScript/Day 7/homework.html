@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Reminder</title>
+</head>
+<body>
+    <h2>Event Reminder</h2>
+    <p>Enter a past date:</p>
+    <input type="date" id="eventDate">
+    <button onclick="showDetails()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function showDetails() {
+            let input = document.getElementById("eventDate").value;
+            if (!input) return;
+
+            let event = new Date(input);
+            let year = event.getFullYear();
+            let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            let monthName = monthNames[event.getMonth()];
+            let day = event.getDate();
+
+            let today = new Date();
+            let yearsPassed = today.getFullYear() - year;
+            let hasAnniversaryPassed = today.getMonth() > event.getMonth() || (today.getMonth() === event.getMonth() && today.getDate() >= event.getDate());
+            if (!hasAnniversaryPassed) {
+                yearsPassed--;
+            }
+
+            let message = yearsPassed >= 1 ? "It has been more than a year since that date." : "It has been less than a year since that date.";
+
+            document.getElementById("result").innerText =`Date: ${day} ${monthName}, ${year}\nYears passed: ${yearsPassed}\n${message}`;
+        }
+    </script>
+</body>
+</html>

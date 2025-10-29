@@ -15,15 +15,12 @@
         function getBirthdayDetails(friend) {
             let birth = new Date(friend.birthDate);
             let year = birth.getFullYear();
-            let monthNames = ["January", "February", "March", "April", "May", "June", 
-                              "July", "August", "September", "October", "November", "December"];
+            let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             let monthName = monthNames[birth.getMonth()];
             let day = birth.getDate();
             let today = new Date();
             let age = today.getFullYear() - year;
-            let hasBirthdayPassed =
-                today.getMonth() > birth.getMonth() ||
-                (today.getMonth() === birth.getMonth() && today.getDate() >= birth.getDate());
+            let hasBirthdayPassed = today.getMonth() > birth.getMonth() || (today.getMonth() === birth.getMonth() && today.getDate() >= birth.getDate());
             if (!hasBirthdayPassed) {
                 age--;
             }

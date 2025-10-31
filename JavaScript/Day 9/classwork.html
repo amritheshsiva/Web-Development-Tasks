@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Comment Number Check</title>
+</head>
+<body>
+    <h2>User Comment Number Checker</h2>
+    <script>
+    let comment = "My son is 12 years old. Our flat number is 45 and contact is 9876543210.";
+    let pattern = /\d+/g;
+    let hasNumber = pattern.test(comment);
+    let updateComment = comment.replace(pattern, "NUMBER");
+    document.write("<b>Number found:</b> " + hasNumber + "<br>");
+    document.write("<b>Updated comment:</b> " + updateComment);
+</script>
+
+</body>
+</html>

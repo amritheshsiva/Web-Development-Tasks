@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comment Filter</title>
+</head>
+<body>
+<script>
+function filterComment(comment) {
+    let banWord = /bad|ugly|stupid/gi;
+    let cleaned = comment.replace(banWord, "***");
+    let numMatch = comment.match(/\d+/g);
+    let numCount = numMatch ? numMatch.length : 0;
+    let capWord = comment.match(/\b[A-Z][a-zA-Z]*/g);
+    let capCount = capWord ? capWord.length : 0;
+    return "Cleaned Comment: " + cleaned + "\nNumbers Found: " + numCount + "\nCapitalized Words: " + capCount;
+}
+let userComment = "I think this movie was BAD and 100% Stupid! But the Acting was Amazing and 3 actors were great.";
+console.log(filterComment(userComment));
+</script>
+</body>
+</html>

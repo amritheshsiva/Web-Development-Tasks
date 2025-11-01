@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Message</title>
+</head>
+<body>
+    <script>
+        let jsontxt = '{"name":"Amrithesh","email":"amrithesh@example.com","message":"This is a test message"}';
+        const showMessage = () => {
+            try {
+                let jstxt = JSON.parse(jsontxt);
+                console.log(`Message received from ${jstxt.name}`);
+            } 
+            catch (error) {
+                console.log("Error: Unable to parse JSON -", error.message);
+            }
+        };
+        showMessage();
+    </script>
+</body>
+</html>

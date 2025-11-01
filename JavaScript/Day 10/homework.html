@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Feedback</title>
+</head>
+<body>
+    <script>
+        let feedbackjson = '{"name":"Jishnu","feedback":"Thank you for your help!"}';
+
+        try {
+            let feedbackjs = JSON.parse(feedbackjson);
+
+            let checkFeedback = (text) => {
+                if (/thank/i.test(text)) {
+                    console.log("Positive feedback received");
+                } 
+                else {
+                    console.log("Feedback noted");
+                }
+            };
+
+            checkFeedback(feedbackjs.feedback);
+
+        } 
+        catch (error) {
+            console.log("Invalid JSON format:", error);
+        }
+    </script>
+</body>
+</html>

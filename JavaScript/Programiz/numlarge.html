@@ -7,10 +7,22 @@
 </head>
 <body>
     <script>
-        let a=Number(prompt("Enter number one:"));
-        let b=Number(prompt("Enter number two:"));
-        let c=Number(prompt("Enter number three:"));
-        if((a>))
+    let a=Number(prompt("Enter first number:"));
+    let b=Number(prompt("ENter second number:"));
+    let c=Number(prompt("Enter third number:"));
+    if((a>b)&& (a>c))
+    {
+        document.write(`${a} is greater than ${b} & ${c}`);
+    }
+    else if((b>a)&&(b>c)){
+        document.write(`${b}is greater than ${a} &${c}`);
+    }
+    else if((c>a)&&(c>a)){
+        document.write(`${c} is greater than ${a}&${b}`);
+    }
+    else{
+        document.write("Some numbers are equal");
+    }
     </script>
     
 </body>

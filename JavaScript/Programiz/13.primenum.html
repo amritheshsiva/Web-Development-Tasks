@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n=Number(prompt("Enter a number:"));
+        isPrime=true;
+        if(n<=1){
+            isPrime=false;
+        }
+        else{
+            for(let i=2;i<n;i++){
+                if(n%i==0){
+                    isPrime=false;                    
+                }
+            }
+        }
+        if(isPrime){
+            document.write(`The number ${n} is a prime number`);
+        }
+        else{
+            document.write(`The number ${n} is not a prime number`);
+        }
+
+
+        // let n=Number(prompt("Enter a number:"));
+        // if(n<=1){
+        //     document.write("It is not a prime number");
+        // }
+        // else if(n==2){
+        //     document.write("It is a prime number");
+        // }
+        // else{
+        //     for(let i=2;i<n;i++){
+        //         if(n%i==0){
+        //         document.write("It is not a prime number");
+        //         break;
+        //         }
+        //         else{
+        //             document.write("It is a prime")
+        //             break;
+        //         }
+        //     }
+        // }
+    </script>
+</body>
+</html>

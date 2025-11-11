@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:linear-gradient(135deg, #f3f4f6, #dbeafe);
+            font-family:sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            color: #2563eb;               
+            font-size: 30px;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        .container{
+            background-color:white;
+            padding:40px 60px;
+        }
+        #fnumber{
+            background-color:rgb(237, 234, 235);
+            border-style:none;
+            border-radius:5px;
+            padding:8px;
+            font-size:11px;
+        }
+        #snumber{
+            background-color:rgb(237, 234, 235);
+            border-style:none;
+            border-radius:5px;
+            padding:8px;
+            font-size:11px;
+        }
+        #op{
+            background-color:rgb(237, 234, 235);
+            color:rgb(151, 146, 147)
+
+        }
+        #ans{
+            background-color:rgb(237, 234, 235);
+            color:rgb(151, 146, 147);
+            border-style:none;
+            border-radius:5px;
+            padding:11px;   
+        }
+        #result{
+            background-color:rgb(237, 234, 235);
+            color:rgb(151, 146, 147);
+            border-style:none;
+            border-radius:5px;
+            padding:20px;
+            width:150px;
+            height:25px;             
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <h2>Calculator</h2>
+    <div class="container ">
+        <label for="fnumber" style="font-size:14px;">First Number:</label><br>
+        <input type="text" placeholder="Enter First Number " id="fnumber"><br><br>
+        <label for="snumber" style="font-size:14px;">Second Number:</label><br>
+        <input type="text" placeholder="Enter Second Number" id="snumber"><br><br>
+        <label for="op"style="font-size:14px;">Operator</label><br>
+        <select id="op">
+            <option>Add</option>
+            <option>Subtract</option>
+            <option>Multiply</option>
+            <option>Division</option>
+        </select><br><br>
+        <button type="button" id="ans"onclick="show()">Result</button><br><br>
+        <div id="result"></div>
+    </div>
+    </div>
+<script>
+
+        function add(a,b){
+            result= a+b;
+        }
+        function sub(a,b){
+            result= a-b; 
+        }
+        function mul(a,b){
+            result= a*b;
+        }
+        function div(a,b){
+            result= a/b;
+        }
+        function print(result) {
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+        function show(){
+        let a=Number(document.getElementById("fnumber").value);
+        let b=Number(document.getElementById("snumber").value);
+        let operator=document.getElementById("op").value;
+        // let result;
+
+        if(operator=="Add"){
+            add(a,b);
+        }
+        else if(operator=="Subtract"){
+            sub(a,b);
+        }
+        else if(operator=="Multiply"){
+            mul(a,b);
+        }
+        else if(operator=="Division"){
+            div(a,b);
+        }
+        else{
+            result="undefined";
+        }
+        print(result);
+    }
+
+</script>
+</body>
+</html>

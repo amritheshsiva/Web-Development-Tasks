@@ -1,128 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <style>
-        body{
-            background-color:linear-gradient(135deg, #f3f4f6, #dbeafe);
-            font-family:sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        h2 {
-            color: #2563eb;               
-            font-size: 30px;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-        }
-        .container{
-            background-color:white;
-            padding:40px 60px;
-        }
-        #fnumber{
-            background-color:rgb(237, 234, 235);
-            border-style:none;
-            border-radius:5px;
-            padding:8px;
-            font-size:11px;
-        }
-        #snumber{
-            background-color:rgb(237, 234, 235);
-            border-style:none;
-            border-radius:5px;
-            padding:8px;
-            font-size:11px;
-        }
-        #op{
-            background-color:rgb(237, 234, 235);
-            color:rgb(151, 146, 147)
-
-        }
-        #ans{
-            background-color:rgb(237, 234, 235);
-            color:rgb(151, 146, 147);
-            border-style:none;
-            border-radius:5px;
-            padding:11px;   
-        }
-        #result{
-            background-color:rgb(237, 234, 235);
-            color:rgb(151, 146, 147);
-            border-style:none;
-            border-radius:5px;
-            padding:20px;
-            width:150px;
-            height:25px;             
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+   body {
+    background-color: rgb(219, 234, 254);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    }
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h2 {
+      color: #2563eb;
+      font-size: 30px;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    .container {
+      background-color: white;
+      padding: 50px 60px;
+      border-radius: 10px;
+    }
+    input, select {
+      background-color: rgb(237, 234, 235);
+      border: none;
+      border-radius: 5px;
+      padding: 8px;
+      font-size: 13px;
+      width: 100%;
+    }
+    #ans {
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 11px;
+      width: 100%;
+    }
+    #result {
+      background-color: rgb(237, 234, 235);
+      color: rgb(51, 50, 50);
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <div class="main">
+  <div class="main">
     <h2>Calculator</h2>
-    <div class="container ">
-        <label for="fnumber" style="font-size:14px;">First Number:</label><br>
-        <input type="text" placeholder="Enter First Number " id="fnumber"><br><br>
-        <label for="snumber" style="font-size:14px;">Second Number:</label><br>
-        <input type="text" placeholder="Enter Second Number" id="snumber"><br><br>
-        <label for="op"style="font-size:14px;">Operator</label><br>
-        <select id="op">
-            <option>Add</option>
-            <option>Subtract</option>
-            <option>Multiply</option>
-            <option>Division</option>
-        </select><br><br>
-        <button type="button" id="ans"onclick="show()">Result</button><br><br>
-        <div id="result"></div>
-    </div>
-    </div>
-<script>
+    <div class="container">
+      <label for="fnumber" style="font-size:14px;">First Number:</label><br>
+      <input type="text" placeholder="Enter First Number" id="fnumber"><br><br>
 
-        function add(a,b){
-            result= a+b;
-        }
-        function sub(a,b){
-            result= a-b; 
-        }
-        function mul(a,b){
-            result= a*b;
-        }
-        function div(a,b){
-            result= a/b;
-        }
-        function print(result) {
-            document.getElementById("result").innerHTML = "Result: " + result;
-        }
-        function show(){
-        let a=Number(document.getElementById("fnumber").value);
-        let b=Number(document.getElementById("snumber").value);
-        let operator=document.getElementById("op").value;
-        if(operator=="Add"){
-            add(a,b);
-        }
-        else if(operator=="Subtract"){
-            sub(a,b);
-        }
-        else if(operator=="Multiply"){
-            mul(a,b);
-        }
-        else if(operator=="Division"){
-            div(a,b);
-        }
-        else{
-            result="undefined";
-        }
-        print(result);
+      <label for="snumber" style="font-size:14px;">Second Number:</label><br>
+      <input type="text" placeholder="Enter Second Number" id="snumber"><br><br>
+
+      <label for="op" style="font-size:14px;">Operator:</label><br>
+      <select id="op">
+        <option>Add (+)</option>
+        <option>Subtract (-)</option>
+        <option>Multiply (x)</option>
+        <option>Division (/)</option>
+      </select><br><br>
+
+      <button type="button" class="btn btn-primary" id="ans" onclick="show()">Calculate</button><br><br>
+      <div id="result">Result: </div>
+    </div>
+  </div>
+
+  <script>
+    function add(a, b) { 
+        return a + b; 
     }
-
-</script>
+    function sub(a, b) { 
+        return a - b; 
+    }
+    function mul(a, b) {
+         return a * b; 
+        }
+    function div(a, b) {
+         return a / b; 
+        }
+    function print(result) {
+        document.getElementById("result").innerHTML = "Result: " + result;
+    }
+    function show() {
+      let a = Number(document.getElementById("fnumber").value);
+      let b = Number(document.getElementById("snumber").value);
+      let operator = document.getElementById("op").value;
+      let result;
+    if (operator === "Add (+)") {
+        result = add(a, b);
+    } 
+    else if (operator === "Subtract (-)") {
+        result = sub(a, b);
+    } 
+    else if (operator === "Multiply (x)") {
+        result = mul(a, b);
+    } 
+    else if (operator === "Division (/)") {
+        result = div(a, b);
+    } 
+    else {
+        result = "Invalid Operator";
+      }
+      print(result);
+    }
+  </script>
 </body>
 </html>

@@ -82,7 +82,7 @@
 
   <script>
     function add(a, b) { 
-        return a + b; 
+        return (a + b); 
     }
     function sub(a, b) { 
         return a - b; 
@@ -94,15 +94,21 @@
          return a / b; 
         }
     function print(result) {
-        document.getElementById("result").innerHTML = "Result: " + result;
+        document.getElementById("result").innerHTML = "Result: " + result.toFixed(2);
     }
     function show() {
-      let a = Number(document.getElementById("fnumber").value);
-      let b = Number(document.getElementById("snumber").value);
+      let a = document.getElementById("fnumber").value;
+      let b = document.getElementById("snumber").value;
       let operator = document.getElementById("op").value;
-      let result;
+      let result; 
+    a=Number(a);
+    b=Number(b);
+    if (isNaN(a)||isNaN(b)) {
+      document.getElementById("result").innerHTML="It is not a number.Please Enter a number";
+      return;
+    }
     if (operator === "Add (+)") {
-        result = add(a, b);
+        result = (add(a, b));
     } 
     else if (operator === "Subtract (-)") {
         result = sub(a, b);
@@ -111,8 +117,14 @@
         result = mul(a, b);
     } 
     else if (operator === "Division (/)") {
+      if(b==0){
+        document.getElementById("result").innerHTML="Cannot be divided with zero";
+      }
+      else{
         result = div(a, b);
-    } 
+      }
+    }
+    
     else {
         result = "Invalid Operator";
       }

@@ -32,14 +32,14 @@
     let tickets=[1001,1002,1003,1004,1005,1006];
     document.getElementById("tickets").innerHTML=tickets;
     function getResult() {
-    let randomIndex = Math.floor(Math.random() * tickets.length);
-    let winner = tickets[randomIndex];
-    console.log('Winner is:', winner);
-    document.getElementById('winner').innerText = 'Winner: ' + winner;
-    document.getElementById('modalWinner').innerText = 'Winner: ' + winner;
-    let modal = new bootstrap.Modal(document.getElementById('winnerModal'));
-    modal.show();
-  }
+        let randomIndex = Math.floor(Math.random() * tickets.length);
+        let winner = tickets[randomIndex];
+        console.log('Winner is:', winner);
+        document.getElementById('winner').innerText = 'Winner: ' + winner;
+        document.getElementById('modalWinner').innerText = 'Winner: ' + winner;
+        let modal = new bootstrap.Modal(document.getElementById('winnerModal'));
+        modal.show();
+        }
 </script>
 
 </body>

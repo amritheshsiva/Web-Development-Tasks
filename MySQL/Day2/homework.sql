@@ -3,7 +3,8 @@ CREATE TABLE `school`.`books` (`id` INT NOT NULL AUTO_INCREMENT , `title` VARCHA
 
 -- Inserting into Table
 INSERT INTO books
-VALUES(1,"The Great Gatsby","F. Scott Fitzgerald",350,"Fiction"),
+VALUES
+(1,"The Great Gatsby","F. Scott Fitzgerald",350,"Fiction"),
 (2,"A Brief History of Time","Stephen Hawking",550,"Science"),
 (3,"Sapiens","Yuval Noah Harari",480,"History"),
 (4,"The Da Vinci Code","Dan Brown",420,"Fiction"),

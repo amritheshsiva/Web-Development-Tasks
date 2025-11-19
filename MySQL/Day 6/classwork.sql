@@ -1,4 +1,4 @@
--- "books1" table creation
+-- "books1" table creating
 CREATE TABLE `school`.`books1` (`id` INT NOT NULL AUTO_INCREMENT , `title` VARCHAR(25) NOT NULL , `author` VARCHAR(25) NOT NULL , `genre` VARCHAR(25) NOT NULL , `price` DECIMAL NOT NULL , `copies_sold` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 -- "bestsellers" Table creating

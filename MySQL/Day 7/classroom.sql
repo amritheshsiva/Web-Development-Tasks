@@ -1,5 +1,5 @@
 -- Table creation
-CREATE TABLE `school`.`student_courses` (`id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(25) NOT NULL , `course` VARCHAR(25) NOT NULL , `score` INT NOT NULL , `email` VARCHAR(25) NOT NULL , `phone` VARCHAR(12) NOT NULL , `city` VARCHAR(25) NOT NULL , `bonus_points` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+CREATE TABLE `school`.`student_courses` (`id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(25) NOT NULL , `course` VARCHAR(25) NOT NULL , `score` INT NOT NULL , `email` VARCHAR(25) NOT NULL , `phone` VARCHAR(12) NOT NULL , `city` VARCHAR(25) NOT NULL , `bonus_points` INT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 -- Inserting Values
 INSERT INTO student_courses

@@ -1,7 +1,7 @@
 -- Datatbase Creation
 CREATE DATABASE GroceryShop;
 -- Selecting database
-USE groceryshop;
+USE Groceryshop;
 
 -- Creating Table
 CREATE TABLE products
@@ -17,4 +17,4 @@ ADD category VARCHAR(25);
 TRUNCATE TABLE products;
 
 -- delete the entire database as it’s no longer needed.
-DROP DATABASE groceryshop;
+DROP DATABASE Groceryshop;

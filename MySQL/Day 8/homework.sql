@@ -16,7 +16,7 @@ CREATE TABLE books(
     book_id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(25),
     price INT,
-    author_id INT
+    author_id INT 
 );
 
 -- To add a new column called published_year (number) to the books table.

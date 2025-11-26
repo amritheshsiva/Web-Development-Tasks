@@ -1,0 +1,6 @@
+-- Database creation
+-- Selecting Database
+-- Table "categories" creating
+-- Inserting values in "categories" table
+-- Table "books" creating
+-- Inserting values in "books" table

@@ -5,9 +5,9 @@ CREATE DATABASE lib;
 USE lib;
 
 -- Table "authors" creation
-CREATE TABLE AUTHORS(
+CREATE TABLE authors(
     author_id INT AUTO_INCREMENT PRIMARY KEY,
-    author_name VARCHAR(20)
+    author_name VARCHAR(30)
     );
 
 -- Inserting into table authors

@@ -9,7 +9,7 @@ student_id INT UNIQUE AUTO_INCREMENT,name VARCHAR(25),email VARCHAR(25) UNIQUE);
 -- TO create Table "courses"
 CREATE TABLE courses (course_id INT UNIQUE,course_name VARCHAR(25));
 
--- To create Table "enrollments" linking tables students and courses
+-- To create Table "enrollments" linking tables "students" and "courses"
 CREATE TABLE enrollments(
     student_id INT, 
     course_id INT,

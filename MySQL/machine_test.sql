@@ -48,7 +48,7 @@ VALUES
 (9,10,"Pass");
 
 -- Query to get list of employees who took more than 5 leaves and in sales department.
-SELECT Name 
+SELECT Name,Department 
 FROM Employee
 WHERE `Leave`>5 AND Department = "Sales";
 
@@ -76,6 +76,12 @@ WHERE id IN(
     FROM Exam
     WHERE exam_status="Pass"
     );
+-- OR
+SELECT Employee.Name
+FROM Employee
+LEFT JOIN Exam
+ON Exam.Employee_id=Employee.id
+WHERE Exam.exam_status="Pass";
 
 -- Query to list employees who have not attended the exam.
 SELECT Employee.Name

@@ -1,5 +1,5 @@
 import random
-price_rice=float(40)
+price_rice=float(45)
 price_sugar=float(40)
 price_oil=float(130)
 quant_rice=float(3)
@@ -14,7 +14,7 @@ print("Total price of oil is",total_oil)
 total=total_rice+total_sugar+total_oil
 print("Total bill is",total)
 print("Total bill as integer",int(total))
-print("Total billa as string",str(total))
+print("Total bill as string",str(total))
 del_charge= random.randrange(5,10)
 final=total+del_charge
 print("Bill including delivery charge",final)

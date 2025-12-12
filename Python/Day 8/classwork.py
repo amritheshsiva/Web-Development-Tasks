@@ -8,7 +8,6 @@ class Person :
 class Employee(Person):
     def __init__(self,name,age,employee_id):
         Person.__init__(self, name, age)
-        # super().__init__(name, age)   
         self.id=employee_id
     def show_details(self):
         print("Name : ",self.name)
@@ -17,7 +16,6 @@ class Employee(Person):
 class PartTime(Person):
     def __init__(self,name,age,working_hours):
         Person.__init__(self, name, age)
-        # super().__init__(name,age)
         self.work=working_hours
     def show_details(self):
         print("Name : ",self.name)

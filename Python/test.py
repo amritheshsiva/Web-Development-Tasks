@@ -1,8 +1,10 @@
+class Student:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
 
-def factorial(x):
-    if x == 1:
-        return 1
-    else:
-        return (x * factorial(x-1))
-num = 3
-print("The factorial of", num, "is", factorial(num))
+  def intro(self):
+    print("Hello my name is " + self.name)
+
+stud1 = Student("Kevin", 26)
+stud1.intro()

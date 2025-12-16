@@ -1,10 +1,6 @@
-class Student:
-  def __init__(self, name, age):
-    self.name = name
-    self.age = age
-
-  def intro(self):
-    print("Hello my name is " + self.name)
-
-stud1 = Student("Kevin", 26)
-stud1.intro()
+def print_num(n):
+    if n==0:
+        return
+    print_num(n-1)
+    print(n)
+print_num(5)

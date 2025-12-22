@@ -1,0 +1,6 @@
+n=input("Enter a new item:")
+f = open("items.txt", "a")
+f.write(n+"\n")
+f.close()
+f = open("items.txt", "r")
+print(f.read())

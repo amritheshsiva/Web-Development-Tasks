@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script src="{% static 'script.js' %}"></script>
+</head>
+<body>
+
+<h1>Contact Me</h1>
+<p>This is a simple contact page.</p>
+
+<button onclick="showMessage()">Click Me</button>
+
+<br><br>
+<a href="{% url 'gallery' %}">Go to Gallery</a>
+
+</body>
+</html>

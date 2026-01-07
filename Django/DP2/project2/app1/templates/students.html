@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student List</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<h2>Classroom Students</h2>
+
+<ul>
+    {% if students %}
+        {% for student in students %}
+            <li>
+                {{ student.name }} - Grade: {{ student.grade }}
+                {% if student.passed %}
+                    <span class="pass">Passed</span>
+                {% else %}
+                    <span class="fail">Failed</span>
+                {% endif %}
+            </li>
+        {% endfor %}
+    {% else %}
+        <li>No students found.</li>
+    {% endif %}
+</ul>
+
+</body>
+</html>

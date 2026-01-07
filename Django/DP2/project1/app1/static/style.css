@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.full-time {
+    color: green;
+    font-weight: bold;
+}
+
+.part-time {
+    color: red;
+    font-weight: bold;
+}
+
+li {
+    margin-bottom: 10px;
+}

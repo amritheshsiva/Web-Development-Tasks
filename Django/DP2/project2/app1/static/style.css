@@ -1,0 +1,17 @@
+.pass {
+    color: green;
+    font-weight: bold;
+}
+
+.fail {
+    color: red;
+    font-weight: bold;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}

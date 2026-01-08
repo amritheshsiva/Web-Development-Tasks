@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favorite Color</title>
+</head>
+<body>
+
+<h2>Enter Details</h2>
+
+<form method="POST" action="{% url 'result' %}">
+    {% csrf_token %}
+
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Favorite Color:</label><br>
+    <input type="text" name="color" required><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

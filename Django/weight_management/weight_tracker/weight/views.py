@@ -27,16 +27,16 @@ def add_weight(request):
         form = WeightForm()
     return render(request, 'add_weight.html', {'form': form})
 
-# Show Weight List
+# To show Weight List
 @login_required
 def weight_list(request):
     weight_objects = Weight.objects.filter(user=request.user).order_by('-date')
-    paginator = Paginator(weight_objects, 1)  # 5 weights per page
+    paginator = Paginator(weight_objects, 1) 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, 'weight_list.html', {'page_obj': page_obj})
 
-# Delete Weight
+# To delete Weight
 from django.shortcuts import get_object_or_404
 @login_required
 def delete_weight(request, id):
@@ -44,7 +44,7 @@ def delete_weight(request, id):
     weight.delete()
     return redirect('weight_list')
 
-# Edit Weight
+# To edit Weight
 @login_required
 def edit_weight(request, id):
     weight_obj = get_object_or_404(Weight, id=id, user=request.user)

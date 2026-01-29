@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, logout
 
-# SIGNUP
+# SIGNUP code
 def signup_page(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -14,10 +14,7 @@ def signup_page(request):
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
 
-# LOGIN
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import login
-from django.shortcuts import render, redirect
+# LOGIN code
 def login_page(request):
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
@@ -30,7 +27,7 @@ def login_page(request):
 
     return render(request, 'login.html', {'form': form})
 
-# LOGOUT
+# LOGOUT code
 @login_required(login_url='/login/')
 def logout_page(request):
     if request.method == 'POST':

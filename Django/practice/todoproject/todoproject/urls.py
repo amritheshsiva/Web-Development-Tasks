@@ -1,5 +1,10 @@
-from django.urls import path
-from greeting import views
-urlpatterns=[
-    path('',views.greeting)
+from django.contrib import admin
+from django.urls import path, include
+from django.http import HttpResponse
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('productsapi/', include('productsapi.urls')),
+    path('products/', include('products.urls')),
 ]
+

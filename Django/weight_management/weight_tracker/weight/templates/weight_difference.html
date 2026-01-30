@@ -6,7 +6,9 @@
     <title>Weight Difference</title>
 </head>
 <body>
-
+    {% extends 'layout/app-layout.html' %}
+    {% block 'content' %}
+<div class="wt6">
 <h2>Weight Difference</h2>
 
 <form method="post">
@@ -14,17 +16,12 @@
     {{ form.as_p }}
     <button type="submit">Check</button>
 </form>
-
-<!-- {% if result != None %}
-    <h3>Weight difference: {{ result }} kg</h3>
-{% endif %} -->
 {% if result %}
     <h3>Weight difference: {{ result }} kg</h3>
 {% endif %}
-
-
 <br>
 <a href="/weights/">Back to list</a>
-
+{% endblock %}
+</div>
 </body>
 </html>

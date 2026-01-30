@@ -4,9 +4,10 @@
     <title>Login</title>
 </head>
 <body>
-
+        {% extends 'layout/app-layout.html' %}
+    {% block 'content' %}
+<div class="wt1">
 <h2>Login</h2>
-
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
@@ -14,6 +15,12 @@
 </form>
 
 <p> New user?<a href="{% url 'signup' %}">Sign Up</a></p>
+</div>
+
+{% endblock %}
 
 </body>
 </html>
+
+
+

@@ -6,6 +6,9 @@
     <title>Add Weight</title>
 </head>
 <body>
+    {% extends 'layout/app-layout.html' %}
+    {% block 'content' %}
+    <div class="wt4">
     <h2>Add Weight</h2>
 
     {% for message in messages %}
@@ -17,8 +20,12 @@
     {{ form.as_p }}
         <button type="submit">Save</button>
     </form>
+
 <p><a href="/weights/">View My Weights</a></p>
 <p><a href="/logout/">Logout</a></p>
+    </div>
+{% endblock %}
+
 
 </body>
 </html>

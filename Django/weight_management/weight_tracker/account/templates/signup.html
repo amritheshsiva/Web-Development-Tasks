@@ -2,9 +2,12 @@
 <html>
 <head>
     <title>Signup</title>
+
 </head>
 <body>
-
+{% extends 'layout/app-layout.html' %}
+    {% block 'content' %}
+    <div class="wt3">
 <h2>Sign Up</h2>
 
 <form method="post">
@@ -14,6 +17,9 @@
 </form>
 
 <p>Already have an account?<a href="{% url 'login' %}">Login</a></p>
+</div>
+    {% endblock %}
+
 
 </body>
 </html>

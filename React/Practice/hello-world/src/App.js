@@ -1,12 +1,12 @@
-import "./App.css";
-import image from "./images/mohanlal.jpeg"
+function handleClick() {
+  console.log('Button was clicked!');
+}
+
 function App() {
-  let greeting = "Hello World";
   return (
-  <div>
-  <h1 className="greetingStyle">{greeting}</h1>
-  <img src={image} alt="mohanlal"/>
-  </div>
+    <button onClick={handleClick}>
+      Click me
+    </button>
   );
 }
 export default App;

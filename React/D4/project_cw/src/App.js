@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <p>Welcome {name}</p>
-      <button onClick={() => setName('Alice')}>Login as Alice</button>
+      <button onClick={() => setName('Alice')}>Login as Alice!</button>
     </div>
   );
 }

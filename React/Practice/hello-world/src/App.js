@@ -1,12 +1,19 @@
-function handleClick() {
-  console.log('Button was clicked!');
-}
+import React, { useState } from 'react';
+import Child from './Child';
 
 function App() {
-  return (
-    <button onClick={handleClick}>
-      Click me
-    </button>
-  );
+  const [ dataFromChild, setDataFromChild] = useState(null);
+  
+  const handleDataFromChild = (data) => {
+    setDataFromChild(data);
 }
+
+  return(
+      <div>
+            <Child onDataFromChild = {handleDataFromChild} />
+            <p> Data from child component : {dataFromChild} </p>
+    </div>
+    );
+}
+
 export default App;

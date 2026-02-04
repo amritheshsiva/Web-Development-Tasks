@@ -4,7 +4,6 @@ function App() {
   const [name, setName] = useState('Guest');
   useEffect(() => {
     console.log(`Welcome ${name}`);
-    // Do something here after the count state value changes
   }, [name]);
 
   return (

@@ -4,7 +4,9 @@ function App() {
   return(
   <div>
     <Navbar/>
-    <p>Home component </p>
+    <p>Home</p>
+    <p>About Us</p>
+    <p>Contact Page</p>
   </div>
 );
 }

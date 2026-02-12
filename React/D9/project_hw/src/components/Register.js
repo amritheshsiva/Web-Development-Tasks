@@ -14,7 +14,7 @@ function Register() {
       await axios.post(
         "https://worksheet-product.mashupstack.com/register",
         {
-          user_name: name,   // ✅ API expects user_name
+          user_name: name,  
           email: email,
           password: password
         }
@@ -24,7 +24,7 @@ function Register() {
       navigate("/login");
 
     } catch (error) {
-      console.log(error.response); // helps debugging
+      console.log(error.response); 
       alert(
         error.response?.data?.message ||
         JSON.stringify(error.response?.data) ||
